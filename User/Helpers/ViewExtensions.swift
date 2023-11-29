@@ -7,14 +7,24 @@
 
 import SwiftUI
 
-struct ViewExtensions: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+extension View {
+    @ViewBuilder
+    func hSpacing (_ alignment: Alignment = .center) -> some View {
+        self
+            .frame(maxWidth: .infinity, alignment: alignment)
     }
-}
-
-struct ViewExtensions_Previews: PreviewProvider {
-    static var previews: some View {
-        ViewExtensions()
+    
+    @ViewBuilder
+    func vSpacing (_ alignment: Alignment = .center) -> some View {
+        self
+            .frame(maxHeight: .infinity, alignment: alignment)
+    }
+    
+    //disable with oapacity
+    @ViewBuilder
+    func disableWithOpacity (_ condition : Bool) -> some View {
+        self
+            .disabled(condition)
+            .opacity(condition ? 0.5 : 1)
     }
 }

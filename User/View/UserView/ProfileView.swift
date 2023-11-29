@@ -8,19 +8,22 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @Binding var isAuthenticated: Bool
     
-    @State private var isAuthenticated = false
+    
     @State private var Username:String = ""
     @State private var emailID:String = ""
-    @State private var phone:String = ")"
+    @State private var phone:String = ""
     @State private var errorMessage: String?
     @State private var showingEditProfile = false
     @State private var showingChangePassword = false
+    @State private var showingAlert = false
+    @State private var isLouggedout = false
     func loadUserDetails() {
         isAuthenticated = true
         AuthService.shared.fetchUserDetails { result in
             DispatchQueue.main.async {
-                isAuthenticated = false
+               
                 switch result {
                 case .success(let userDetails):
                     self.Username = userDetails.Username
@@ -74,6 +77,12 @@ struct ProfileView: View {
 
             
             Section("General") {
+                //anas interface
+                ProfileOptionRow(iconName: "person", optionName: "Anas") {
+           
+
+                }
+                
                 ProfileOptionRow(iconName: "gearshape.fill", optionName: "Edit your Profile") {
                 //authenticateUser()
                     self.showingEditProfile = true
@@ -94,15 +103,35 @@ struct ProfileView: View {
                 } label: {
                     SettingsRowView(imageName: "xmark.circle.fill", title: "Delete Account", tintColor: .red)
                 }
+                
             }
             Section{
                 Button{
+                   
+                    showingAlert = true
+
                     print("Sign Out ...")
                 } label: {
                     SettingsRowView(imageName: "arrow.left.circle.fill", title: "Sign Out", tintColor: .red)
                 }
                
             }
+            .alert(isPresented: $showingAlert) {
+                Alert(
+                    title: Text("Loggout"),
+                    message: Text("Are you sur you want to Log Out!."),
+                    primaryButton: .default(Text("Yes")) {
+                        UserDefaults.standard.removeObject(forKey: "tokenAuth")
+                            UserDefaults.standard.synchronize()
+                        self.showingAlert = true
+                      
+                        isAuthenticated = false
+                    },
+                    secondaryButton: .cancel()
+                )
+            }
+            
+        
         }
         .onAppear {
         loadUserDetails()
@@ -116,8 +145,9 @@ struct ProfileView: View {
 }
 
 struct ProfileView_Previews: PreviewProvider {
+    @State static var isAuthenticated = false
     static var previews: some View {
-        ProfileView()
+        ProfileView(isAuthenticated: $isAuthenticated)
     }
 }
 

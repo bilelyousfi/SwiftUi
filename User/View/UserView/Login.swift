@@ -77,7 +77,7 @@ struct Login: View {
                 .disableWithOpacity(emailID.isEmpty || password.isEmpty)
             }
             .fullScreenCover(isPresented: $isAuthenticated, content: {
-                HomePage()
+                HomePage(isAuthenticated: $isAuthenticated)
             })
             .padding(.top,20)
             Spacer(minLength: 0)

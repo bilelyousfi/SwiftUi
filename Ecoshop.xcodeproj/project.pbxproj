@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6E1E95F72B150795007CA401 /* ChangePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1E95F62B150795007CA401 /* ChangePassword.swift */; };
+		6E44C5012B17289F0081E8E5 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E44C5002B17289F0081E8E5 /* CameraView.swift */; };
+		6E44C5032B1728C80081E8E5 /* FavouritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E44C5022B1728C80081E8E5 /* FavouritesView.swift */; };
 		6E5566E12B11EAEC0032CD09 /* UserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5566E02B11EAEC0032CD09 /* UserApp.swift */; };
 		6E5566E32B11EAEC0032CD09 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5566E22B11EAEC0032CD09 /* ContentView.swift */; };
 		6E5566E52B11EAEE0032CD09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E5566E42B11EAEE0032CD09 /* Assets.xcassets */; };
@@ -58,7 +60,9 @@
 
 /* Begin PBXFileReference section */
 		6E1E95F62B150795007CA401 /* ChangePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePassword.swift; sourceTree = "<group>"; };
-		6E5566DD2B11EAEC0032CD09 /* User.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = User.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E44C5002B17289F0081E8E5 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		6E44C5022B1728C80081E8E5 /* FavouritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesView.swift; sourceTree = "<group>"; };
+		6E5566DD2B11EAEC0032CD09 /* Ecoshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ecoshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E5566E02B11EAEC0032CD09 /* UserApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApp.swift; sourceTree = "<group>"; };
 		6E5566E22B11EAEC0032CD09 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6E5566E42B11EAEE0032CD09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -66,9 +70,9 @@
 		6E5566E92B11EAEE0032CD09 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		6E5566EC2B11EAEE0032CD09 /* User.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = User.xcdatamodel; sourceTree = "<group>"; };
 		6E5566EE2B11EAEE0032CD09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6E5566F32B11EAEE0032CD09 /* UserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E5566F32B11EAEE0032CD09 /* EcoshopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EcoshopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E5566F72B11EAEE0032CD09 /* UserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
-		6E5566FD2B11EAEE0032CD09 /* UserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UserUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E5566FD2B11EAEE0032CD09 /* EcoshopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EcoshopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E5567012B11EAEE0032CD09 /* UserUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUITests.swift; sourceTree = "<group>"; };
 		6E5567032B11EAEE0032CD09 /* UserUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		6E55674C2B11F26C0032CD09 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
@@ -133,7 +137,6 @@
 				6E5567A62B13409A0032CD09 /* CustomTabBar.swift */,
 				6E5567A82B1348970032CD09 /* TabCurve.swift */,
 				6E5567AA2B13656A0032CD09 /* ProfileView.swift */,
-				6E5567AC2B1372AA0032CD09 /* HouseView.swift */,
 				9EB1A9DF2B14F3D400159AC6 /* EditProfile.swift */,
 				6E1E95F62B150795007CA401 /* ChangePassword.swift */,
 			);
@@ -172,9 +175,9 @@
 		6E5566DE2B11EAEC0032CD09 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6E5566DD2B11EAEC0032CD09 /* User.app */,
-				6E5566F32B11EAEE0032CD09 /* UserTests.xctest */,
-				6E5566FD2B11EAEE0032CD09 /* UserUITests.xctest */,
+				6E5566DD2B11EAEC0032CD09 /* Ecoshop.app */,
+				6E5566F32B11EAEE0032CD09 /* EcoshopTests.xctest */,
+				6E5566FD2B11EAEE0032CD09 /* EcoshopUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -224,6 +227,9 @@
 		6E55674B2B11F1AE0032CD09 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6E44C5022B1728C80081E8E5 /* FavouritesView.swift */,
+				6E44C5002B17289F0081E8E5 /* CameraView.swift */,
+				6E5567AC2B1372AA0032CD09 /* HouseView.swift */,
 				6E44C4FD2B1726000081E8E5 /* UserView */,
 			);
 			path = View;
@@ -257,9 +263,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6E5566DC2B11EAEC0032CD09 /* User */ = {
+		6E5566DC2B11EAEC0032CD09 /* Ecoshop */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6E5567072B11EAEE0032CD09 /* Build configuration list for PBXNativeTarget "User" */;
+			buildConfigurationList = 6E5567072B11EAEE0032CD09 /* Build configuration list for PBXNativeTarget "Ecoshop" */;
 			buildPhases = (
 				6E5566D92B11EAEC0032CD09 /* Sources */,
 				6E5566DA2B11EAEC0032CD09 /* Frameworks */,
@@ -269,14 +275,14 @@
 			);
 			dependencies = (
 			);
-			name = User;
+			name = Ecoshop;
 			productName = User;
-			productReference = 6E5566DD2B11EAEC0032CD09 /* User.app */;
+			productReference = 6E5566DD2B11EAEC0032CD09 /* Ecoshop.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6E5566F22B11EAEE0032CD09 /* UserTests */ = {
+		6E5566F22B11EAEE0032CD09 /* EcoshopTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6E55670A2B11EAEE0032CD09 /* Build configuration list for PBXNativeTarget "UserTests" */;
+			buildConfigurationList = 6E55670A2B11EAEE0032CD09 /* Build configuration list for PBXNativeTarget "EcoshopTests" */;
 			buildPhases = (
 				6E5566EF2B11EAEE0032CD09 /* Sources */,
 				6E5566F02B11EAEE0032CD09 /* Frameworks */,
@@ -287,14 +293,14 @@
 			dependencies = (
 				6E5566F52B11EAEE0032CD09 /* PBXTargetDependency */,
 			);
-			name = UserTests;
+			name = EcoshopTests;
 			productName = UserTests;
-			productReference = 6E5566F32B11EAEE0032CD09 /* UserTests.xctest */;
+			productReference = 6E5566F32B11EAEE0032CD09 /* EcoshopTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		6E5566FC2B11EAEE0032CD09 /* UserUITests */ = {
+		6E5566FC2B11EAEE0032CD09 /* EcoshopUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6E55670D2B11EAEE0032CD09 /* Build configuration list for PBXNativeTarget "UserUITests" */;
+			buildConfigurationList = 6E55670D2B11EAEE0032CD09 /* Build configuration list for PBXNativeTarget "EcoshopUITests" */;
 			buildPhases = (
 				6E5566F92B11EAEE0032CD09 /* Sources */,
 				6E5566FA2B11EAEE0032CD09 /* Frameworks */,
@@ -305,9 +311,9 @@
 			dependencies = (
 				6E5566FF2B11EAEE0032CD09 /* PBXTargetDependency */,
 			);
-			name = UserUITests;
+			name = EcoshopUITests;
 			productName = UserUITests;
-			productReference = 6E5566FD2B11EAEE0032CD09 /* UserUITests.xctest */;
+			productReference = 6E5566FD2B11EAEE0032CD09 /* EcoshopUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -333,7 +339,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6E5566D82B11EAEC0032CD09 /* Build configuration list for PBXProject "User" */;
+			buildConfigurationList = 6E5566D82B11EAEC0032CD09 /* Build configuration list for PBXProject "Ecoshop" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -346,9 +352,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6E5566DC2B11EAEC0032CD09 /* User */,
-				6E5566F22B11EAEE0032CD09 /* UserTests */,
-				6E5566FC2B11EAEE0032CD09 /* UserUITests */,
+				6E5566DC2B11EAEC0032CD09 /* Ecoshop */,
+				6E5566F22B11EAEE0032CD09 /* EcoshopTests */,
+				6E5566FC2B11EAEE0032CD09 /* EcoshopUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -399,9 +405,11 @@
 				9EB1A9E02B14F3D400159AC6 /* EditProfile.swift in Sources */,
 				6E5566E32B11EAEC0032CD09 /* ContentView.swift in Sources */,
 				9EB1A9DE2B14ED1F00159AC6 /* UserDetails.swift in Sources */,
+				6E44C5012B17289F0081E8E5 /* CameraView.swift in Sources */,
 				6E5567AB2B13656A0032CD09 /* ProfileView.swift in Sources */,
 				6E5567562B121CE60032CD09 /* Signup.swift in Sources */,
 				6E5567542B1207D40032CD09 /* GradiantButton.swift in Sources */,
+				6E44C5032B1728C80081E8E5 /* FavouritesView.swift in Sources */,
 				6E5567502B11F5A20032CD09 /* ViewExtensions.swift in Sources */,
 				6E5566E12B11EAEC0032CD09 /* UserApp.swift in Sources */,
 				6E5567A02B1257F60032CD09 /* OTPVerificationView.swift in Sources */,
@@ -434,12 +442,12 @@
 /* Begin PBXTargetDependency section */
 		6E5566F52B11EAEE0032CD09 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6E5566DC2B11EAEC0032CD09 /* User */;
+			target = 6E5566DC2B11EAEC0032CD09 /* Ecoshop */;
 			targetProxy = 6E5566F42B11EAEE0032CD09 /* PBXContainerItemProxy */;
 		};
 		6E5566FF2B11EAEE0032CD09 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6E5566DC2B11EAEC0032CD09 /* User */;
+			target = 6E5566DC2B11EAEC0032CD09 /* Ecoshop */;
 			targetProxy = 6E5566FE2B11EAEE0032CD09 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -630,7 +638,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/User.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/User";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ecoshop.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Ecoshop";
 			};
 			name = Debug;
 		};
@@ -649,7 +657,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/User.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/User";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ecoshop.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Ecoshop";
 			};
 			name = Release;
 		};
@@ -690,7 +698,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6E5566D82B11EAEC0032CD09 /* Build configuration list for PBXProject "User" */ = {
+		6E5566D82B11EAEC0032CD09 /* Build configuration list for PBXProject "Ecoshop" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6E5567052B11EAEE0032CD09 /* Debug */,
@@ -699,7 +707,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6E5567072B11EAEE0032CD09 /* Build configuration list for PBXNativeTarget "User" */ = {
+		6E5567072B11EAEE0032CD09 /* Build configuration list for PBXNativeTarget "Ecoshop" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6E5567082B11EAEE0032CD09 /* Debug */,
@@ -708,7 +716,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6E55670A2B11EAEE0032CD09 /* Build configuration list for PBXNativeTarget "UserTests" */ = {
+		6E55670A2B11EAEE0032CD09 /* Build configuration list for PBXNativeTarget "EcoshopTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6E55670B2B11EAEE0032CD09 /* Debug */,
@@ -717,7 +725,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6E55670D2B11EAEE0032CD09 /* Build configuration list for PBXNativeTarget "UserUITests" */ = {
+		6E55670D2B11EAEE0032CD09 /* Build configuration list for PBXNativeTarget "EcoshopUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6E55670E2B11EAEE0032CD09 /* Debug */,

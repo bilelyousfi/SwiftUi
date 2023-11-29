@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct HomePage: View {
+    @Binding var isAuthenticated: Bool
     
     @State var selectedTab = "house"
     var body: some View {
+        
         ZStack(alignment: .bottom) {
             Color.white
                 .ignoresSafeArea()
@@ -21,8 +23,16 @@ struct HomePage: View {
                        // .transition(.move(edge: .bottom))
                 }
                 if selectedTab == "person"{
-                    ProfileView()
+                    
+                    ProfileView(isAuthenticated: $isAuthenticated)
+                    
                        
+                }
+                if selectedTab == "camera"{
+                    CameraView()
+                }
+                if selectedTab == "heart" {
+                    FavouritesView()
                 }
                 Spacer()
             }
@@ -36,7 +46,9 @@ struct HomePage: View {
 }
 
 struct HomePage_Previews: PreviewProvider {
+    
     static var previews: some View {
-        HomePage()
+        
+        ContentView()
     }
 }

@@ -8,7 +8,7 @@
 import Foundation
 class AuthService {
     static let shared = AuthService()
-    let baseUrl = "http://localhost:3000/"
+    let baseUrl = "http://192.168.1.195:3000/"
     
     
     private init() {}
