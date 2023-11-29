@@ -55,7 +55,8 @@ struct Login: View {
                 
                 //login Button
                 GradiantButton(title: "Login", icon: "arrow.right"){
-                    AuthService.shared.signIn(email: self.emailID, password: self.password){result in
+                    isAuthenticated = true
+                  /* AuthService.shared.signIn(email: self.emailID, password: self.password){result in
                         DispatchQueue.main.async {
                             switch result {
                             case .success(let token):
@@ -71,14 +72,16 @@ struct Login: View {
                         }
                       
                         
-                    }
+                    }*/
                     
                 }
-                .disableWithOpacity(emailID.isEmpty || password.isEmpty)
+                .fullScreenCover(isPresented: $isAuthenticated, content: {
+                    
+                    HomePage(isAuthenticated: $isAuthenticated)
+                })
+
+                //.disableWithOpacity(emailID.isEmpty || password.isEmpty)
             }
-            .fullScreenCover(isPresented: $isAuthenticated, content: {
-                HomePage(isAuthenticated: $isAuthenticated)
-            })
             .padding(.top,20)
             Spacer(minLength: 0)
             HStack(spacing: 6 ){
