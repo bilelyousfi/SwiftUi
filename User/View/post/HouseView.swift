@@ -11,7 +11,11 @@ struct HouseView: View {
     var body: some View {
         NavigationView{
             
+            
+
+            
         }
+        
     }
 }
 
