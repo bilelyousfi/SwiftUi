@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct PostCardBody: View {
+    let content:String
+    let likes_count:String
     var body: some View {
         VStack(alignment: .leading, spacing: 15) {
-                    Image(systemName: "heart")
+                    Image("starbucks")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .roundedCorner(20, corners: [.bottomLeft, .topRight, .bottomRight])
@@ -18,7 +20,7 @@ struct PostCardBody: View {
                     HStack {
                         HStack(spacing: 3) {
                             Image(systemName: "heart")
-                            Text("11")
+                            Text(likes_count)
                         }
                         Spacer()
                         HStack {
@@ -30,7 +32,7 @@ struct PostCardBody: View {
                     }
                     .font(.callout)
                     
-                    Text("gfhghjhgkjhkjkllh")
+                    Text(content)
                         .lineLimit(2)
                         .multilineTextAlignment(.leading)
                         .font(.callout)
@@ -43,6 +45,6 @@ struct PostCardBody: View {
 
 struct PostCardBody_Previews: PreviewProvider {
     static var previews: some View {
-        PostCardBody()
+        PostCardBody(content: "fdgfhfghjg", likes_count: "20")
     }
 }

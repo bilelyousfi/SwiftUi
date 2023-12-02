@@ -8,17 +8,20 @@
 import SwiftUI
 
 struct PostCardHeader: View {
+  
+    let nameuser:String
+    let datpub:String
     
     var body: some View {
         HStack{
-            Image("")
+            Image("obida")
                 .resizable()
                 .aspectRatio( contentMode: .fill)
                 .frame(width: 40,height: 40)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
             VStack{
-                Text("HASSEN MRAKBEN").bold()
-                Text("")
+                Text(nameuser).bold()
+                Text(datpub)
                     .font(.footnote)
                     .foregroundColor(.gray)
                 
@@ -31,6 +34,6 @@ struct PostCardHeader: View {
 
 struct PostCardHeader_Previews: PreviewProvider {
     static var previews: some View {
-        PostCardHeader()
+        PostCardHeader(nameuser: "hassen",datpub: "01/01/12023")
     }
 }

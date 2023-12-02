@@ -9,12 +9,15 @@ import SwiftUI
 
 struct HouseView: View {
     var body: some View {
-        NavigationView{
-            
-            
-
-            
-        }
+        NavigationView {
+                   ScrollView {
+                       
+                       PostListView() // Display the list of posts
+                   }
+                   .navigationTitle("POSTS") // Set the navigation title
+                   .navigationBarItems( trailing: Image(systemName: "plus.circle")) // Add leading and trailing navigation bar items
+               }
+        
         
     }
 }
