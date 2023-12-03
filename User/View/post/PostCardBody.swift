@@ -10,6 +10,7 @@ import SwiftUI
 struct PostCardBody: View {
     let content:String
     let likes_count:String
+    let comment_count:String
     var body: some View {
         VStack(alignment: .leading, spacing: 15) {
                     Image("starbucks")
@@ -25,7 +26,7 @@ struct PostCardBody: View {
                         Spacer()
                         HStack {
                             Image(systemName: "text.bubble")
-                            Text("09")
+                            Text(comment_count)
                         }
                        
                         
@@ -45,6 +46,6 @@ struct PostCardBody: View {
 
 struct PostCardBody_Previews: PreviewProvider {
     static var previews: some View {
-        PostCardBody(content: "fdgfhfghjg", likes_count: "20")
+        PostCardBody(content: "fdgfhfghjg", likes_count: "20",comment_count: "08")
     }
 }

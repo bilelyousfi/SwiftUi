@@ -15,7 +15,7 @@ struct HouseView: View {
                        PostListView() // Display the list of posts
                    }
                    .navigationTitle("POSTS") // Set the navigation title
-                   .navigationBarItems( trailing: Image(systemName: "plus.circle")) // Add leading and trailing navigation bar items
+                   .navigationBarItems( trailing: NavigationLink(destination: AddPost(), label:{Image(systemName: "plus.circle")} ) ) // Add leading and trailing navigation bar items
                }
         
         

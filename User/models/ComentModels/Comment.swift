@@ -7,23 +7,17 @@
 
 import Foundation
 
-struct Comment:Codable,Identifiable{
+struct Comment:Codable{
     
     
     
-    var id:String
+    var _id:String
     var content:String
     var iduser:String
     var idpost:String
     var __v:Int
     
-    enum Codingkeys :String, CodingKey{
-        case id = "_id"
-        case content
-        case iduser
-        case idpost
-        case __v
-    }
+   
   
     
 }
