@@ -8,58 +8,63 @@
 import SwiftUI
 
 struct ProductHistory: View {
-    var images  = [
-        "eau",
-        "randa",
-        "flitox",
-        "danao",
-    ]
-    
-    let
+  
+    @State private var showDestination = false
+    @StateObject var productViewModel: ProductViewModel
     
     var body: some View {
         NavigationStack {
-            VStack{
-            SearchAndFilterBar()
-            ScrollView{
-                LazyVStack(spacing: 32){
-                    ForEach(0 ... 10, id: \.self) { listing in
-                        NavigationLink(value: listing){
-                            
-                            VStack(spacing: 8) {
-                                // image
-                                Rectangle()
-                                    .frame(height: 320)
-                                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                                // listening details
-                                VStack(alignment: .leading){
-                                    Text(PurshaceProduct.name)
-                                        .fontWeight(.semibold)
-                                        .foregroundStyle(.black)
-                                    Text("12/09/2023")
-                                        .foregroundColor(.red)
+            
+            if showDestination {
+                // page pour la recherche
+            }else {
+                VStack{
+                SearchAndFilterBar()
+                ScrollView{
+                    LazyVStack(spacing: 32){
+                        ForEach(0 ... 10, id: \.self) { listing in
+                            NavigationLink(value: listing){
+                                
+                                VStack(spacing: 8) {
+                                    // image
+                                    Rectangle()
+                                        .frame(height: 320)
+                                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                                    // listening details
+                                    VStack(alignment: .leading){
+                                        // Product Name
+                                        Text("Name")
+                                            .fontWeight(.semibold)
+                                            .foregroundStyle(.black)
+                                        // Date of Purshace
+                                        Text("12/09/2023")
+                                            .foregroundColor(.red)
+                                    }
+                                    .font(.footnote)
                                 }
-                                .font(.footnote)
+                                
+                                    .frame(height: 400)
+                                    .clipShape(RoundedRectangle(cornerRadius: 10))
                             }
-                            
-                                .frame(height: 400)
-                                .clipShape(RoundedRectangle(cornerRadius: 10))
+                          
                         }
-                      
                     }
+                    .padding()
                 }
-                .padding()
+                .navigationDestination(for: Int.self) { listing in
+                    Text("Listing detail view ...")
+                }
+                }
             }
-            .navigationDestination(for: Int.self) { listing in
-                Text("Listing detail view ...")
-            }
-            }
+                
+                
+      
         }
     }
 }
 
 struct ProductHistory_Previews: PreviewProvider {
     static var previews: some View {
-        ProductHistory()
+        ProductHistory(productViewModel: ProductViewModel())
     }
 }

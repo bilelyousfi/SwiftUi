@@ -6,6 +6,8 @@
 //
 
 import Foundation
+
+
 struct PurshaceProduct : Codable, Hashable {
     var _id : String
     var name: String
@@ -18,6 +20,6 @@ struct PurshaceProduct : Codable, Hashable {
 }
 
 struct fetchPurshaceProductResponse : Decodable {
-    let product : [PurshaceProduct]
-    
+    let products : [PurshaceProduct]
+    let statusCode: Int
 }

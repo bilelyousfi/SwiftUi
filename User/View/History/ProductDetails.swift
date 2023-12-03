@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ProductDetails: View {
+    
+    @StateObject var productViewModel: ProductViewModel
+
     var body: some View {
         ScrollView{
             // image
@@ -15,6 +18,7 @@ struct ProductDetails: View {
                 .frame(height: 320)
                 
             VStack (alignment: .leading, spacing: 8){
+                // Product Name
                 Text("Flitox")
                     .font(.title)
                     .fontWeight(.semibold)
@@ -25,9 +29,10 @@ struct ProductDetails: View {
                 Text("Description : ")
                     .font(.headline)
                     .frame(width: 250, alignment: .leading)
+                    .foregroundColor(.red)
                     
                 Spacer()
-                
+                // Product description
                 Text("Flitox est un groupe de punk hardcore français, originaire d'Emerainville, en Seine-et-Marne. Formé en 1986, il se séparera trois ans plus tard après avoir sortis un EP et deux albums")
                 }
                 
@@ -37,9 +42,10 @@ struct ProductDetails: View {
                 Text("Carbon Footer : ")
                     .font(.headline)
                     .frame(width: 250, alignment: .leading)
+                    .foregroundColor(.red)
                     
                 Spacer()
-                
+                    // CarbonFooter
                 Text("250 KG")
                 }
                 
@@ -49,6 +55,7 @@ struct ProductDetails: View {
                 Text("Water Consumption : ")
                     .font(.headline)
                     .frame(width: 250, alignment: .leading)
+                    .foregroundColor(.red)
                     
                 Spacer()
                 
@@ -61,6 +68,7 @@ struct ProductDetails: View {
                 Text("Recyclability : ")
                     .font(.headline)
                     .frame(width: 250, alignment: .leading)
+                    .foregroundColor(.red)
                     
                 Spacer()
                 
@@ -73,6 +81,6 @@ struct ProductDetails: View {
 
 struct ProductDetails_Previews: PreviewProvider {
     static var previews: some View {
-        ProductDetails()
+        ProductDetails(productViewModel: ProductViewModel())
     }
 }
