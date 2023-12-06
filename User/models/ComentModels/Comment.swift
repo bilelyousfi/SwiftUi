@@ -7,17 +7,12 @@
 
 import Foundation
 
-struct Comment:Codable{
-    
-    
-    
-    var _id:String
+struct Comment:Codable,Identifiable{
+    var id:String
     var content:String
     var iduser:String
     var idpost:String
-    var __v:Int
-    
-   
-  
-    
+    var date:String
+
 }
+
