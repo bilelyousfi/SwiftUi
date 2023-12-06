@@ -38,6 +38,13 @@
 		6E5567B22B13AF6B0032CD09 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5567B12B13AF6B0032CD09 /* User.swift */; };
 		6E5567B52B13B2080032CD09 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5567B42B13B2080032CD09 /* AuthService.swift */; };
 		6E5567B72B13D4260032CD09 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5567B62B13D4260032CD09 /* LoginResponse.swift */; };
+		8F37FECC2B20C3AB000062AC /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F37FECB2B20C3AB000062AC /* Home.swift */; };
+		8F37FECE2B20C425000062AC /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F37FECD2B20C425000062AC /* CategoryModel.swift */; };
+		8F37FED02B20C4B2000062AC /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F37FECF2B20C4B2000062AC /* ProductModel.swift */; };
+		8F37FED22B20C57B000062AC /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F37FED12B20C57B000062AC /* CardView.swift */; };
+		8F37FED42B20C58E000062AC /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F37FED32B20C58E000062AC /* CollectionView.swift */; };
+		8F37FEDF2B20C7C5000062AC /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F37FEDE2B20C7C5000062AC /* CartManager.swift */; };
+		8FBAD8892B20A3AA00C168E9 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 8FBAD8882B20A3AA00C168E9 /* CodeScanner */; };
 		9EB1A9DE2B14ED1F00159AC6 /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB1A9DD2B14ED1F00159AC6 /* UserDetails.swift */; };
 		9EB1A9E02B14F3D400159AC6 /* EditProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB1A9DF2B14F3D400159AC6 /* EditProfile.swift */; };
 /* End PBXBuildFile section */
@@ -95,6 +102,12 @@
 		6E5567B12B13AF6B0032CD09 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6E5567B42B13B2080032CD09 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		6E5567B62B13D4260032CD09 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		8F37FECB2B20C3AB000062AC /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		8F37FECD2B20C425000062AC /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
+		8F37FECF2B20C4B2000062AC /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		8F37FED12B20C57B000062AC /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		8F37FED32B20C58E000062AC /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
+		8F37FEDE2B20C7C5000062AC /* CartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
 		9EB1A9DD2B14ED1F00159AC6 /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
 		9EB1A9DF2B14F3D400159AC6 /* EditProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FBAD8892B20A3AA00C168E9 /* CodeScanner in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +188,7 @@
 		6E5566D42B11EAEC0032CD09 = {
 			isa = PBXGroup;
 			children = (
+				8F37FEDE2B20C7C5000062AC /* CartManager.swift */,
 				6E5566E02B11EAEC0032CD09 /* UserApp.swift */,
 				6E5566DF2B11EAEC0032CD09 /* User */,
 				6E5566F62B11EAEE0032CD09 /* UserTests */,
@@ -238,6 +253,7 @@
 		6E55674B2B11F1AE0032CD09 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8F37FECA2B20C0A0000062AC /* ShopView */,
 				6E44C5022B1728C80081E8E5 /* FavouritesView.swift */,
 				6E44C5002B17289F0081E8E5 /* CameraView.swift */,
 				6E5567AC2B1372AA0032CD09 /* HouseView.swift */,
@@ -258,6 +274,7 @@
 		6E5567B02B13AE7F0032CD09 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				8F37FEB72B20B586000062AC /* ShopModels */,
 				6E44C4FE2B1726290081E8E5 /* UserModels */,
 			);
 			path = models;
@@ -269,6 +286,25 @@
 				6E44C4FF2B17263D0081E8E5 /* UserService */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		8F37FEB72B20B586000062AC /* ShopModels */ = {
+			isa = PBXGroup;
+			children = (
+				8F37FECD2B20C425000062AC /* CategoryModel.swift */,
+				8F37FECF2B20C4B2000062AC /* ProductModel.swift */,
+			);
+			path = ShopModels;
+			sourceTree = "<group>";
+		};
+		8F37FECA2B20C0A0000062AC /* ShopView */ = {
+			isa = PBXGroup;
+			children = (
+				8F37FECB2B20C3AB000062AC /* Home.swift */,
+				8F37FED12B20C57B000062AC /* CardView.swift */,
+				8F37FED32B20C58E000062AC /* CollectionView.swift */,
+			);
+			path = ShopView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,6 +323,9 @@
 			dependencies = (
 			);
 			name = Ecoshop;
+			packageProductDependencies = (
+				8FBAD8882B20A3AA00C168E9 /* CodeScanner */,
+			);
 			productName = User;
 			productReference = 6E5566DD2B11EAEC0032CD09 /* Ecoshop.app */;
 			productType = "com.apple.product-type.application";
@@ -359,6 +398,9 @@
 				Base,
 			);
 			mainGroup = 6E5566D42B11EAEC0032CD09;
+			packageReferences = (
+				8FBAD8872B20A3AA00C168E9 /* XCRemoteSwiftPackageReference "CodeScanner" */,
+			);
 			productRefGroup = 6E5566DE2B11EAEC0032CD09 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -402,6 +444,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E5566ED2B11EAEE0032CD09 /* User.xcdatamodeld in Sources */,
+				8F37FECC2B20C3AB000062AC /* Home.swift in Sources */,
 				6E44C5062B174F7B0081E8E5 /* empty.swift in Sources */,
 				6E5567A72B13409A0032CD09 /* CustomTabBar.swift in Sources */,
 				6E5567522B11FA990032CD09 /* CustomTF.swift in Sources */,
@@ -409,14 +452,17 @@
 				6E55675C2B12310D0032CD09 /* OTPView.swift in Sources */,
 				6E55674D2B11F26C0032CD09 /* Login.swift in Sources */,
 				6E5567B52B13B2080032CD09 /* AuthService.swift in Sources */,
+				8F37FED42B20C58E000062AC /* CollectionView.swift in Sources */,
 				6E1E95F72B150795007CA401 /* ChangePassword.swift in Sources */,
 				6E5567A92B1348970032CD09 /* TabCurve.swift in Sources */,
 				6E5566EA2B11EAEE0032CD09 /* Persistence.swift in Sources */,
 				6E5567B22B13AF6B0032CD09 /* User.swift in Sources */,
+				8F37FECE2B20C425000062AC /* CategoryModel.swift in Sources */,
 				6E5567A22B133BB20032CD09 /* HomePage.swift in Sources */,
 				9EB1A9E02B14F3D400159AC6 /* EditProfile.swift in Sources */,
 				6E5566E32B11EAEC0032CD09 /* ContentView.swift in Sources */,
 				9EB1A9DE2B14ED1F00159AC6 /* UserDetails.swift in Sources */,
+				8F37FED02B20C4B2000062AC /* ProductModel.swift in Sources */,
 				6E44C5012B17289F0081E8E5 /* CameraView.swift in Sources */,
 				6E5567AB2B13656A0032CD09 /* ProfileView.swift in Sources */,
 				6E5567562B121CE60032CD09 /* Signup.swift in Sources */,
@@ -426,8 +472,10 @@
 				6E5566E12B11EAEC0032CD09 /* UserApp.swift in Sources */,
 				6E5567A02B1257F60032CD09 /* OTPVerificationView.swift in Sources */,
 				6E5567AF2B137F3A0032CD09 /* SettingsRowView.swift in Sources */,
+				8F37FEDF2B20C7C5000062AC /* CartManager.swift in Sources */,
 				6E5567582B1223B70032CD09 /* ForgotPassword.swift in Sources */,
 				6E5567B72B13D4260032CD09 /* LoginResponse.swift in Sources */,
+				8F37FED22B20C57B000062AC /* CardView.swift in Sources */,
 				6E55675A2B122E450032CD09 /* PasswordResetView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -589,11 +637,13 @@
 				DEVELOPMENT_ASSET_PATHS = "\"User/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need the camera to scan QR codes";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -617,11 +667,13 @@
 				DEVELOPMENT_ASSET_PATHS = "\"User/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need the camera to scan QR codes";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -747,6 +799,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8FBAD8872B20A3AA00C168E9 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8FBAD8882B20A3AA00C168E9 /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8FBAD8872B20A3AA00C168E9 /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		6E5566EB2B11EAEE0032CD09 /* User.xcdatamodeld */ = {

@@ -1,13 +1,13 @@
 //
-//  FavouritesView.swift
+//  ShopView.swift
 //  Ecoshop
 //
-//  Created by Ayachi Zakaria on 29/11/2023.
+//  Created by Badis Aloui on 6/12/2023.
 //
 
 import SwiftUI
 
-struct FavouritesView: View {
+struct ShopView: View {
     
     @StateObject var cartManager = CartManager()
     
@@ -64,7 +64,6 @@ struct FavouritesView: View {
 
 struct ShopView_Previews: PreviewProvider {
     static var previews: some View {
-        FavouritesView()
+        ContentView()
     }
 }
-
