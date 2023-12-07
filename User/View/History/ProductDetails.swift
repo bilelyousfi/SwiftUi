@@ -9,78 +9,92 @@ import SwiftUI
 
 struct ProductDetails: View {
     
-    @StateObject var productViewModel: ProductViewModel
-
+    let product: PurshaceProduct
+    
     var body: some View {
-        ScrollView{
-            // image
-            Rectangle()
+        ScrollView {
+            // Image
+            LoadingImage(url: product.image)
                 .frame(height: 320)
-                
-            VStack (alignment: .leading, spacing: 8){
+            
+            VStack(alignment: .leading, spacing: 8) {
                 // Product Name
-                Text("Flitox")
+                Text(product.name)
                     .font(.title)
                     .fontWeight(.semibold)
                 
                 Divider()
                 
-                VStack(alignment: .leading){
-                Text("Description : ")
-                    .font(.headline)
-                    .frame(width: 250, alignment: .leading)
-                    .foregroundColor(.red)
+                // Product Description
+                VStack(alignment: .leading) {
+                    Text("Description : ")
+                        .font(.headline)
+                        .frame(width: 250, alignment: .leading)
+                        .foregroundColor(.red)
                     
-                Spacer()
-                // Product description
-                Text("Flitox est un groupe de punk hardcore français, originaire d'Emerainville, en Seine-et-Marne. Formé en 1986, il se séparera trois ans plus tard après avoir sortis un EP et deux albums")
+                    Spacer()
+                    
+                    Text(product.description)
                 }
                 
                 Divider()
                 
-                VStack(alignment: .leading){
-                Text("Carbon Footer : ")
-                    .font(.headline)
-                    .frame(width: 250, alignment: .leading)
-                    .foregroundColor(.red)
+                // Carbon Footer
+                VStack(alignment: .leading) {
+                    Text("Carbon Footer : ")
+                        .font(.headline)
+                        .frame(width: 250, alignment: .leading)
+                        .foregroundColor(.red)
                     
-                Spacer()
-                    // CarbonFooter
-                Text("250 KG")
+                    Spacer()
+                    
+                    Text(product.carbonFootPrint)
                 }
                 
                 Divider()
                 
-                VStack(alignment: .leading){
-                Text("Water Consumption : ")
-                    .font(.headline)
-                    .frame(width: 250, alignment: .leading)
-                    .foregroundColor(.red)
+                // Water Consumption
+                VStack(alignment: .leading) {
+                    Text("Water Consumption : ")
+                        .font(.headline)
+                        .frame(width: 250, alignment: .leading)
+                        .foregroundColor(.red)
                     
-                Spacer()
-                
-                Text("0 L")
+                    Spacer()
+                    
+                    Text(product.waterConsumption)
                 }
                 
                 Divider()
                 
-                VStack(alignment: .leading){
-                Text("Recyclability : ")
-                    .font(.headline)
-                    .frame(width: 250, alignment: .leading)
-                    .foregroundColor(.red)
+                // Recyclability
+                VStack(alignment: .leading) {
+                    Text("Recyclability : ")
+                        .font(.headline)
+                        .frame(width: 250, alignment: .leading)
+                        .foregroundColor(.red)
                     
-                Spacer()
-                
-                Text("Non recyclable")
+                    Spacer()
+                    
+                    Text(product.recyclability)
                 }
             }
+            .padding()
         }
     }
 }
 
 struct ProductDetails_Previews: PreviewProvider {
     static var previews: some View {
-        ProductDetails(productViewModel: ProductViewModel())
+        ProductDetails(product: PurshaceProduct(
+            _id: "1",
+            name: "Sample Product",
+            description: "Sample Description",
+            image: "sample_image_url",
+            code: "123",
+            carbonFootPrint: "250 KG",
+            waterConsumption: "0 L",
+            recyclability: "Non recyclable"
+        ))
     }
 }

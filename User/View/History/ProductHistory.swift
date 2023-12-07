@@ -8,59 +8,64 @@
 import SwiftUI
 
 struct ProductHistory: View {
-  
-    @State private var showDestination = false
+    
     @StateObject var productViewModel: ProductViewModel
+    @State private var userId = "123" // Ajoutez la variable userId
     
     var body: some View {
         NavigationStack {
-            
-            if showDestination {
-                // page pour la recherche
-            }else {
-                VStack{
+            VStack {
                 SearchAndFilterBar()
-                ScrollView{
-                    LazyVStack(spacing: 32){
-                        ForEach(0 ... 10, id: \.self) { listing in
-                            NavigationLink(value: listing){
-                                
-                                VStack(spacing: 8) {
-                                    // image
-                                    Rectangle()
-                                        .frame(height: 320)
-                                        .clipShape(RoundedRectangle(cornerRadius: 10))
-                                    // listening details
-                                    VStack(alignment: .leading){
-                                        // Product Name
-                                        Text("Name")
-                                            .fontWeight(.semibold)
-                                            .foregroundStyle(.black)
-                                        // Date of Purshace
-                                        Text("12/09/2023")
-                                            .foregroundColor(.red)
-                                    }
-                                    .font(.footnote)
-                                }
-                                
-                                    .frame(height: 400)
+                
+                ScrollView {
+                    LazyVStack(spacing: 32) {
+                        ForEach(productViewModel.histories.indices, id: \.self) { index in
+                            let history = productViewModel.histories[index]
+
+                            VStack(spacing: 8) {
+                                // Image
+                                LoadingImage(url: history.productId.image)
+                                    .frame(height: 320)
                                     .clipShape(RoundedRectangle(cornerRadius: 10))
+
+                                // Listing details
+                                VStack(alignment: .leading) {
+                                    // Product Name
+                                    Text(history.productId.name)
+                                        .fontWeight(.semibold)
+                                        .foregroundStyle(.black)
+
+                                    // Date of Purchase
+                                    Text("\(history.date, formatter: dateFormatter)")
+                                        .foregroundColor(.red)
+                                }
+                                .font(.footnote)
                             }
-                          
+                            .frame(height: 400)
+                            .clipShape(RoundedRectangle(cornerRadius: 10))
                         }
                     }
                     .padding()
-                }
-                .navigationDestination(for: Int.self) { listing in
-                    Text("Listing detail view ...")
-                }
+                    
+                    // on appear
+                    .onAppear {
+                        if !userId.isEmpty {
+                            productViewModel.fetchHistoryProduct(userId: userId)
+                        }
+                    }
                 }
             }
-                
-                
-      
         }
+        
     }
+    
+    private var dateFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        formatter.timeStyle = .short
+        return formatter
+    }
+    
 }
 
 struct ProductHistory_Previews: PreviewProvider {

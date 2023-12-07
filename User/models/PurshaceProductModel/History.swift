@@ -8,15 +8,15 @@
 import Foundation
 
 
-struct History: Identifiable, Decodable {
+struct History: Identifiable, Codable {
     var id: String
-    var userId:  User
-    var productId:  PurshaceProduct
+    var userId: String
+    var productId: [PurshaceProduct]
     var date: [Date]
 }
 
 struct FetchHistoryResponse: Decodable {
-    let history: [History]
+    let histories: [History]
     let statusCode: Int
 }
 
