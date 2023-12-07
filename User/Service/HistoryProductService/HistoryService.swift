@@ -20,7 +20,7 @@ struct HistoryService {
                             let parsedData = try JSONDecoder().decode(fetchPurshaceProductResponse.self, from: responseData)
                             completion(.success(parsedData))
                             // backend output
-                            print(parsedData.Products)
+                            print(parsedData.products)
                         } catch {
                             print(error)
                             completion(.failure(error))

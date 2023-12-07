@@ -3,7 +3,7 @@ import SwiftUI
 
 class ProductViewModel: ObservableObject {
     
-    @Published var Products: [PurshaceProduct] = []
+    @Published var products: [PurshaceProduct] = []
     @Published var isLoading = true
     @Published var histories: [History] = []
     @Published var date: [Date] = []
@@ -24,7 +24,7 @@ class ProductViewModel: ObservableObject {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
                             if data?.statusCode == 200 {
                                 self.isLoading = false
-                                self.Products = data?.Products ?? []
+                                self.products = data?.products ?? []
                             }
                         }
                         

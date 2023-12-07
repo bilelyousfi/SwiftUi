@@ -20,6 +20,6 @@ struct PurshaceProduct : Codable, Hashable {
 }
 
 struct fetchPurshaceProductResponse : Decodable {
-    let Products : [PurshaceProduct]
+    let products : [PurshaceProduct]
     let statusCode: Int
 }

@@ -13,7 +13,7 @@ struct ProductDetails: View {
     
     var body: some View {
         ScrollView {
-            // Image
+            // Image  LoadingImage(url: product.image) url: URL(string: product.image)
             LoadingImage(url: product.image)
                 .frame(height: 320)
             

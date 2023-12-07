@@ -5,12 +5,12 @@
 //  Created by MacOS on 29/11/2023.
 //
 
+// ProductHistory.swift
 import SwiftUI
 
 struct ProductHistory: View {
-    
     @StateObject var productViewModel: ProductViewModel
-    @State private var userId = "123" // Ajoutez la variable userId
+    // @State private var userId = "" // Ajoutez la variable userId
     
     var body: some View {
         NavigationStack {
@@ -19,57 +19,47 @@ struct ProductHistory: View {
                 
                 ScrollView {
                     LazyVStack(spacing: 32) {
-                        ForEach(productViewModel.histories.indices, id: \.self) { index in
-                            let history = productViewModel.histories[index]
-
-                            VStack(spacing: 8) {
-                                // Image
-                                LoadingImage(url: history.productId.image)
-                                    .frame(height: 320)
-                                    .clipShape(RoundedRectangle(cornerRadius: 10))
-
-                                // Listing details
-                                VStack(alignment: .leading) {
-                                    // Product Name
-                                    Text(history.productId.name)
-                                        .fontWeight(.semibold)
-                                        .foregroundStyle(.black)
-
-                                    // Date of Purchase
-                                    Text("\(history.date, formatter: dateFormatter)")
-                                        .foregroundColor(.red)
+                        ForEach(productViewModel.products, id: \._id) { product in
+                            NavigationLink(destination: ProductDetails(product: product)) {
+                                VStack(spacing: 8) {
+                                    // Image
+                                    LoadingImage(url: product.image)
+                                        .frame(height: 320)
+                                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                                    
+                                    VStack(alignment: .leading) {
+                                        // Product Name
+                                        Text(product.name)
+                                            .fontWeight(.semibold)
+                                            .foregroundStyle(.black)
+                                        
+                                        // Product code
+                                        Text(product.code)
+                                            .fontWeight(.semibold)
+                                            .foregroundStyle(.red)
+                                        
+                                    }
+                                    .font(.footnote)
                                 }
-                                .font(.footnote)
+                                .frame(height: 400)
+                                .clipShape(RoundedRectangle(cornerRadius: 10))
                             }
-                            .frame(height: 400)
-                            .clipShape(RoundedRectangle(cornerRadius: 10))
                         }
                     }
                     .padding()
-                    
-                    // on appear
                     .onAppear {
-                        if !userId.isEmpty {
-                            productViewModel.fetchHistoryProduct(userId: userId)
-                        }
+                        productViewModel.fetchProducts()
+                        
                     }
                 }
             }
         }
         
     }
-    
-    private var dateFormatter: DateFormatter {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .short
-        formatter.timeStyle = .short
-        return formatter
-    }
-    
 }
-
-struct ProductHistory_Previews: PreviewProvider {
-    static var previews: some View {
-        ProductHistory(productViewModel: ProductViewModel())
+    
+    struct ProductHistory_Previews: PreviewProvider {
+        static var previews: some View {
+            ProductHistory(productViewModel: ProductViewModel())
+        }
     }
-}
