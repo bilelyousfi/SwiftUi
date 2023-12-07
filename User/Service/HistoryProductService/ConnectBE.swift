@@ -10,8 +10,7 @@ struct ConnectBE {
     
       //  static let BASE_URL = "http://localhost:3000"
     
-       // static let BASE_URL = "http://192.168.1.151:9090"
-        static let BASE_URL = "http://192.168.1.151:9090"
+        static let BASE_URL = "http://192.168.1.101:9090"
        
        //products routes
        static let fetchProductUrl = BASE_URL + "/product"

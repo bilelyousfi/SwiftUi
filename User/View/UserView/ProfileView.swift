@@ -19,6 +19,8 @@ struct ProfileView: View {
     @State private var showingChangePassword = false
     @State private var showingAlert = false
     @State private var isLouggedout = false
+    @State private var showingPurshaceHistory = false
+    
     func loadUserDetails() {
         isAuthenticated = true
         AuthService.shared.fetchUserDetails { result in
@@ -78,9 +80,12 @@ struct ProfileView: View {
             
             Section("General") {
                 //anas interface
-                ProfileOptionRow(iconName: "person", optionName: "Anas") {
-           
-
+                ProfileOptionRow(iconName: "person", optionName: "Purshace History") {
+                    self.showingPurshaceHistory = true
+                }
+                .sheet(isPresented: $showingPurshaceHistory) {
+                   // ProductHistory(productViewModel: ProductViewModel())
+                    ProductHistory()
                 }
                 
                 ProfileOptionRow(iconName: "gearshape.fill", optionName: "Edit your Profile") {
@@ -91,6 +96,7 @@ struct ProfileView: View {
                 .sheet(isPresented: $showingEditProfile) {
                     EditProfile()
                 }
+                
                 ProfileOptionRow(iconName: "shield", optionName: "Password and Security") {
                                            // Action for Settings
                     self.showingChangePassword = true
@@ -143,6 +149,8 @@ struct ProfileView: View {
     
   
 }
+
+
 
 struct ProfileView_Previews: PreviewProvider {
     @State static var isAuthenticated = false

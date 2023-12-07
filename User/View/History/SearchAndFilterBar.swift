@@ -25,7 +25,6 @@ struct SearchAndFilterBar: View {
             Spacer()
             
             Button(action: {}, label: {
-               // Image(systemName: "magnifyingglass")
                 Image(systemName: "line.3.horizontal.decrease.circle")
                     .foregroundStyle(.black)
             })

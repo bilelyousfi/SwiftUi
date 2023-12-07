@@ -71,6 +71,7 @@
 		6E5567B72B13D4260032CD09 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5567B62B13D4260032CD09 /* LoginResponse.swift */; };
 		9EB1A9DE2B14ED1F00159AC6 /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB1A9DD2B14ED1F00159AC6 /* UserDetails.swift */; };
 		9EB1A9E02B14F3D400159AC6 /* EditProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB1A9DF2B14F3D400159AC6 /* EditProfile.swift */; };
+		F92752E12B217F4500AFF644 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92752E02B217F4500AFF644 /* ApiService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,6 +139,7 @@
 		6E5567B62B13D4260032CD09 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		9EB1A9DD2B14ED1F00159AC6 /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
 		9EB1A9DF2B14F3D400159AC6 /* EditProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfile.swift; sourceTree = "<group>"; };
+		F92752E02B217F4500AFF644 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 		2202CEFF2B1CDA060081E8E7 /* HistoryProductService */ = {
 			isa = PBXGroup;
 			children = (
+				F92752E02B217F4500AFF644 /* ApiService.swift */,
 				2202CF042B1CDA700081E8E7 /* HistoryService.swift */,
 				2202CF002B1CDA360081E8E7 /* ConnectBE.swift */,
 				2202CF252B1CF4730081E8E7 /* LoadingImage.swift */,
@@ -503,6 +506,7 @@
 				6E5567A22B133BB20032CD09 /* HomePage.swift in Sources */,
 				2202CF1B2B1CE3DD0081E8E7 /* History.swift in Sources */,
 				9EB1A9E02B14F3D400159AC6 /* EditProfile.swift in Sources */,
+				F92752E12B217F4500AFF644 /* ApiService.swift in Sources */,
 				6E5566E32B11EAEC0032CD09 /* ContentView.swift in Sources */,
 				9EB1A9DE2B14ED1F00159AC6 /* UserDetails.swift in Sources */,
 				2202CF262B1CF4730081E8E7 /* LoadingImage.swift in Sources */,
