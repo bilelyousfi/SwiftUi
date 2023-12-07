@@ -6,7 +6,7 @@ class ApiService: ObservableObject {
     @Published var products: [PurshaceProduct] = []
 
     func fetchData() {
-        guard let url = URL(string: "https://192.168.1.101:9090/product") else { return }
+        guard let url = URL(string: "https://192.168.1.101:3000/product") else { return }
 
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let data = data {
@@ -22,5 +22,3 @@ class ApiService: ObservableObject {
         }.resume()
     }
 }
-//ProductViewModel apiService
-//product PurshaceProduct

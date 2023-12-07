@@ -9,16 +9,17 @@ import SwiftUI
 
 struct ProductHistory: View {
     
+    @StateObject private var productViewModel = ProductViewModel()
     @State private var favoriteProducts: Set<String> = []
     
     // Replace productViewModel with a static array of products
     let staticProducts: [PurshaceProduct] = [
-        PurshaceProduct(_id: "1", name: "Danao", description: "Description 1", image: "image1", code: "12396325", carbonFootPrint: "250 KG", waterConsumption: "66 L", recyclability: "Recyclable"),
-        PurshaceProduct(_id: "2", name: "Eau", description: "Description 2", image: "image2", code: "45612358", carbonFootPrint: "300 KG", waterConsumption: "250 L", recyclability: "Non recyclable"),
-        PurshaceProduct(_id: "3", name: "Papier", description: "Description 3", image: "image3", code: "78935246", carbonFootPrint: "200 KG", waterConsumption: "36 L", recyclability: "Non recyclable"),
-        PurshaceProduct(_id: "4", name: "Flitox", description: "Description 4", image: "image4", code: "69123456", carbonFootPrint: "30 KG", waterConsumption: "29 L", recyclability: "Recyclable"),
-        PurshaceProduct(_id: "5", name: "Detox", description: "Description 5", image: "image5", code: "00216893", carbonFootPrint: "50 KG", waterConsumption: "50 L", recyclability: "Recyclable"),
-        PurshaceProduct(_id: "6", name: "Product 6", description: "Description 6", image: "image6", code: "74902364", carbonFootPrint: "550 KG", waterConsumption: "6 L", recyclability: "Recyclable"),
+        PurshaceProduct(_id: "1", name: "Danao", description: "idojsfjhiuzefpcdsojfkpa^kpq", image: "danao.jpeg", code: "12396325", carbonFootPrint: "250 KG", waterConsumption: "66 L", recyclability: "Recyclable"),
+        PurshaceProduct(_id: "2", name: "Eau", description: "fkdsfjkngheqihvyuerzigqgbhvyuievbquvbcxjkw", image: "eau.jpeg", code: "45612358", carbonFootPrint: "300 KG", waterConsumption: "250 L", recyclability: "Non recyclable"),
+        PurshaceProduct(_id: "3", name: "Papier", description: "dkqlsnfgqglbhvncfsqfiqfuiqfg", image: "papier.jpeg", code: "78935246", carbonFootPrint: "200 KG", waterConsumption: "36 L", recyclability: "Non recyclable"),
+        PurshaceProduct(_id: "4", name: "Flitox", description: "fkdsfjkngheqihvyuerzigqgbhvyuievbquvbcxjkw", image: "image4", code: "69123456", carbonFootPrint: "30 KG", waterConsumption: "29 L", recyclability: "Recyclable"),
+        PurshaceProduct(_id: "5", name: "Detox", description: "dkqlsnfgqglbhvncfsqfiqfuiqfg", image: "image5", code: "00216893", carbonFootPrint: "50 KG", waterConsumption: "50 L", recyclability: "Recyclable"),
+        PurshaceProduct(_id: "6", name: "Product 6", description: "idojsfjhiuzefpcdsojfkpa", image: "image6", code: "74902364", carbonFootPrint: "550 KG", waterConsumption: "6 L", recyclability: "Recyclable"),
         PurshaceProduct(_id: "7", name: "Product 7", description: "Description 7", image: "image7", code: "56036975", carbonFootPrint: "2 KG", waterConsumption: "77 L", recyclability: "Recyclable"),
     ]
 
@@ -34,12 +35,21 @@ struct ProductHistory: View {
                                 NavigationLink(destination: ProductDetails(product: product)) {
                                     HStack(spacing: 16) {
                                         // Image
-                                        LoadingImage(url: product.image)
+                                      LoadingImage(url: product.image)
                                             .frame(width: 80, height: 80)
                                             .clipShape(RoundedRectangle(cornerRadius: 16))
                                             .overlay(
                                                 RoundedRectangle(cornerRadius: 16)
                                                     .stroke(Color.gray, lineWidth: 1)
+                                         
+                                                
+                                        /* Image("danao") // Utilisez le nom de votre image
+                                                    .resizable()
+                                                    .frame(width: 80, height: 80)
+                                                    .clipShape(RoundedRectangle(cornerRadius: 16))
+                                                    .overlay(
+                                                    RoundedRectangle(cornerRadius: 16)
+                                                    .stroke(Color.gray, lineWidth: 1)  */
                                             )
                                             .animation(.easeInOut(duration: 0.5))
 
@@ -85,6 +95,9 @@ struct ProductHistory: View {
                 }
                 .background(Color(.systemGroupedBackground).ignoresSafeArea())
                 .navigationTitle("Product History")
+                .onAppear {
+                    productViewModel.fetchProducts()
+                }
             }
         }
 
