@@ -11,6 +11,7 @@ struct PostCardBody: View {
     let content:String
     let likes_count:String
     let comment_count:String
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 15) {
                     Image("starbucks")
@@ -25,7 +26,9 @@ struct PostCardBody: View {
                         }
                         Spacer()
                         HStack {
-                            Image(systemName: "text.bubble")
+                           
+                                Image(systemName: "text.bubble")
+                            
                             Text(comment_count)
                         }
                        

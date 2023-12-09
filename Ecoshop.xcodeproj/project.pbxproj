@@ -12,6 +12,9 @@
 		2A2FFBF62B1B826D00F15B13 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2FFBF52B1B826D00F15B13 /* Comment.swift */; };
 		2A2FFBF82B1B87BE00F15B13 /* AddPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2FFBF72B1B87BE00F15B13 /* AddPost.swift */; };
 		2A2FFBFA2B1B892500F15B13 /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2FFBF92B1B892500F15B13 /* CommentViewModel.swift */; };
+		2A306EB32B2498B900022C5C /* CommentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A306EB22B2498B900022C5C /* CommentsView.swift */; };
+		2A306EB52B249D9D00022C5C /* PostCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A306EB42B249D9D00022C5C /* PostCardView.swift */; };
+		2A306EB72B24AE3000022C5C /* CommentItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A306EB62B24AE3000022C5C /* CommentItemView.swift */; };
 		6E1E95F72B150795007CA401 /* ChangePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1E95F62B150795007CA401 /* ChangePassword.swift */; };
 		6E44C5012B17289F0081E8E5 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E44C5002B17289F0081E8E5 /* CameraView.swift */; };
 		6E44C5032B1728C80081E8E5 /* FavouritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E44C5022B1728C80081E8E5 /* FavouritesView.swift */; };
@@ -75,6 +78,9 @@
 		2A2FFBF52B1B826D00F15B13 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		2A2FFBF72B1B87BE00F15B13 /* AddPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPost.swift; sourceTree = "<group>"; };
 		2A2FFBF92B1B892500F15B13 /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
+		2A306EB22B2498B900022C5C /* CommentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsView.swift; sourceTree = "<group>"; };
+		2A306EB42B249D9D00022C5C /* PostCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCardView.swift; sourceTree = "<group>"; };
+		2A306EB62B24AE3000022C5C /* CommentItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentItemView.swift; sourceTree = "<group>"; };
 		6E1E95F62B150795007CA401 /* ChangePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePassword.swift; sourceTree = "<group>"; };
 		6E44C5002B17289F0081E8E5 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		6E44C5022B1728C80081E8E5 /* FavouritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesView.swift; sourceTree = "<group>"; };
@@ -167,6 +173,15 @@
 				2A2FFBF52B1B826D00F15B13 /* Comment.swift */,
 			);
 			path = ComentModels;
+			sourceTree = "<group>";
+		};
+		2A306EB12B24989800022C5C /* Comments */ = {
+			isa = PBXGroup;
+			children = (
+				2A306EB22B2498B900022C5C /* CommentsView.swift */,
+				2A306EB62B24AE3000022C5C /* CommentItemView.swift */,
+			);
+			path = Comments;
 			sourceTree = "<group>";
 		};
 		6E44C4FD2B1726000081E8E5 /* UserView */ = {
@@ -284,6 +299,7 @@
 		6E55674B2B11F1AE0032CD09 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2A306EB12B24989800022C5C /* Comments */,
 				960FAFB02B175CA30094A145 /* post */,
 				6E44C5022B1728C80081E8E5 /* FavouritesView.swift */,
 				6E44C5002B17289F0081E8E5 /* CameraView.swift */,
@@ -329,6 +345,7 @@
 				962FF7642B18B51E00EF5655 /* PostCardHeader.swift */,
 				960A500D2B18C4F20003FA95 /* HouseView.swift */,
 				2A2FFBF72B1B87BE00F15B13 /* AddPost.swift */,
+				2A306EB42B249D9D00022C5C /* PostCardView.swift */,
 			);
 			path = post;
 			sourceTree = "<group>";
@@ -486,14 +503,17 @@
 				6E5567AB2B13656A0032CD09 /* ProfileView.swift in Sources */,
 				6E5567562B121CE60032CD09 /* Signup.swift in Sources */,
 				962FF7652B18B51E00EF5655 /* PostCardHeader.swift in Sources */,
+				2A306EB32B2498B900022C5C /* CommentsView.swift in Sources */,
 				2A2FFBE82B1B36A500F15B13 /* Post.swift in Sources */,
 				6E5567542B1207D40032CD09 /* GradiantButton.swift in Sources */,
 				6E44C5032B1728C80081E8E5 /* FavouritesView.swift in Sources */,
 				96D49E5B2B18A6510096A92D /* Postcard.swift in Sources */,
+				2A306EB72B24AE3000022C5C /* CommentItemView.swift in Sources */,
 				6E5567502B11F5A20032CD09 /* ViewExtensions.swift in Sources */,
 				2A2FFBFA2B1B892500F15B13 /* CommentViewModel.swift in Sources */,
 				6E5566E12B11EAEC0032CD09 /* UserApp.swift in Sources */,
 				2A2FFBF82B1B87BE00F15B13 /* AddPost.swift in Sources */,
+				2A306EB52B249D9D00022C5C /* PostCardView.swift in Sources */,
 				6E5567A02B1257F60032CD09 /* OTPVerificationView.swift in Sources */,
 				6E5567AF2B137F3A0032CD09 /* SettingsRowView.swift in Sources */,
 				96D49E652B18AAA80096A92D /* PostCardBody.swift in Sources */,

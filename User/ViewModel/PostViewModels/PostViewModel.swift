@@ -20,6 +20,7 @@ class PostViewModel:ObservableObject{
                 if let data = data {
                     do {
                         let decodedResponse = try JSONDecoder().decode([Post].self, from: data)
+                        print("\(decodedResponse)")
                         DispatchQueue.main.async {
                             self.posts = decodedResponse
                             

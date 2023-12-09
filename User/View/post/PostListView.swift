@@ -13,14 +13,14 @@ struct PostListView: View {
     var body: some View {
         VStack{
            ForEach(postviewmodel.posts){ post in
-               let listComment = commentviewmodel.fetchComment(for: post.id)
-               Postcard(nameuser: "HASSENMRAKBEN", content: post.content, likes_count:"\(post.likes.count.formatted())",datepub: post.publicationDate,comment_count:"\(listComment.count.formatted())"
-)
+               
+               PostCardView(author: "hassenggggg", content: post.content, id: post.id, datepub: post.publicationDate, count_likes: "\(post.likes.count.formatted())")
+   
                     .padding(.top)
                
-               ForEach(listComment) { comment in
-                   Text(comment.content)
-               }
+             
+               
+               
                 
             }
             

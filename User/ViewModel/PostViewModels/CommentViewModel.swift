@@ -12,35 +12,10 @@ class CommentViewModel:ObservableObject{
     
     private var BaseUrl = "http://172.18.6.149:9090/"
     
+
     
     
-    /*func getCommentsByPost(postID : String, completion: @escaping([Comment]) -> Void ){
-     
-     if let url = URL(string: "\(BaseUrl)comments/\(postID)") {
-     URLSession.shared.dataTask(with: url) {
-     data, response, error in if let data = data {
-     do{
-     let decodedresponse = try JSONDecoder().decode([Comment].self, from: data)
-     DispatchQueue.main.async {
-     self.Comments = decodedresponse
-     completion(decodedresponse)
-     
-     }
-     
-     }catch{
-     print("Erreur de decodage JSON : \(error)")
-     }
-     }
-     
-     }.resume()
-     }
-     
-     
-     
-     }
-     */
-    
-    func fetchComment(for postId : String) -> [Comment] {
+    /*func fetchComment(for postId : String) -> [Comment] {
         guard let url = URL(string: "\(BaseUrl)comments/\(postId)")else{
             fatalError("invalid api url")
         }
@@ -80,7 +55,63 @@ class CommentViewModel:ObservableObject{
         }
         task.resume()
         return Comments
-    }
+    }*/
+    
+    
+    
+    
+    
+    func fetchComments(for postId: String) -> [Comment]  {
+            guard let url = URL(string: "\(BaseUrl)comments/\(postId)") else {
+                fatalError("Invalid API URL")
+            }
+
+            let task = URLSession.shared.dataTask(with: url) { data, response, error in
+                if let error = error {
+                    print("Request error: \(error.localizedDescription)")
+                    return
+                }
+
+                guard let httpResponse = response as? HTTPURLResponse else {
+                    print("Invalid response")
+                    return
+                }
+
+                print("HTTP Status Code: \(httpResponse.statusCode)")
+
+                if let responseData = data {
+                    do {
+                        let decoder = JSONDecoder()
+                        let comments = try decoder.decode([Comment].self, from: responseData)
+
+                        DispatchQueue.main.async {
+                            self.Comments = comments
+                        }
+                    } catch {
+                        do {
+                            let decoder = JSONDecoder()
+                            let comment = try decoder.decode(Comment.self, from: responseData)
+                            // Handle the case where a single comment is returned
+                            DispatchQueue.main.async {
+                                self.Comments = [comment]
+                            }
+                        } catch {
+                            print("Error decoding JSON: \(error.localizedDescription)")
+                            // Print the response string to help debug
+                            if let responseString = String(data: responseData, encoding: .utf8) {
+                                print("Response String: \(responseString)")
+                            }
+                        }
+                    }
+                } else {
+                    print("Response data is empty or nil.")
+                }
+            }
+
+            task.resume()
+        return self.Comments
+        }
+    
     
     
 }
