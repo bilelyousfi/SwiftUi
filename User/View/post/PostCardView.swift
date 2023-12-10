@@ -13,7 +13,8 @@ struct PostCardView: View {
       @State var id : String
       @State var datepub : String
       @State var count_likes : String
-    
+    @State var imagepost : String
+
     var body: some View {
         VStack{
             HStack{
@@ -34,7 +35,7 @@ struct PostCardView: View {
             }
             
             VStack(alignment: .leading, spacing: 15) {
-                        Image("starbucks")
+                        Image(imagepost)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .roundedCorner(20, corners: [.bottomLeft, .topRight, .bottomRight])
@@ -72,6 +73,6 @@ struct PostCardView: View {
 
 struct PostCardView_Previews: PreviewProvider {
     static var previews: some View {
-        PostCardView(author: "hassen",  content: "ffffff", id: "000", datepub: "01/01/2023", count_likes: "0")
+        PostCardView(author: "hassen",  content: "ffffff", id: "000", datepub: "01/01/2023", count_likes: "0",imagepost: "starbucks")
     }
 }

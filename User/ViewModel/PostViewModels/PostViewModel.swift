@@ -9,6 +9,7 @@ import Foundation
 
 class PostViewModel:ObservableObject{
     @Published var posts : [Post] = []
+    @Published var userpost = UserPost()
     private let BaseUrl = "http://172.18.6.149:9090/"
     init() {
             getPosts() 
@@ -33,6 +34,7 @@ class PostViewModel:ObservableObject{
         }
         
     }
+
     
   
 }

@@ -13,8 +13,8 @@ struct PostListView: View {
     var body: some View {
         VStack{
            ForEach(postviewmodel.posts){ post in
-               
-               PostCardView(author: "hassenggggg", content: post.content, id: post.id, datepub: post.publicationDate, count_likes: "\(post.likes.count.formatted())")
+             
+               PostCardView(author:"HASSEN MRAKBEN", content: post.content, id: post.id, datepub: post.publicationDate, count_likes: "\(post.likes.count.formatted())",imagepost:"starbucks")
    
                     .padding(.top)
                

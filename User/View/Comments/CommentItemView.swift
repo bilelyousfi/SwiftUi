@@ -12,25 +12,27 @@ struct CommentItemView: View {
     let datcmt:String
     let content :String
     var body: some View {
-        HStack{
-            Image("obida")
-                .resizable()
-                .aspectRatio( contentMode: .fill)
-                .frame(width: 40,height: 40)
-                .clipShape(RoundedRectangle(cornerRadius: 10))
-            VStack{
-                Text(nameuser).bold()
-                Text(datcmt)
-                    .font(.footnote)
-                    .foregroundColor(.gray)
-              
-                
-            }
-            Spacer()
-            
-        }
         VStack{
-            Text("comment: \(content)")
+            HStack{
+                Image("obida")
+                    .resizable()
+                    .aspectRatio( contentMode: .fill)
+                    .frame(width: 40,height: 40)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                VStack{
+                    Text(nameuser).bold()
+                    Text(datcmt)
+                        .font(.footnote)
+                        .foregroundColor(.gray)
+                    
+                    
+                }
+                Spacer()
+              
+            }
+            HStack{
+                Text("comment: \(content)")
+            }
         }
     }
 }

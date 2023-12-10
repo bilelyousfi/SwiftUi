@@ -12,7 +12,7 @@ struct Post:Codable,Identifiable{
     var content:String
     var publicationDate:String
     var likes:[String]
-   // var media:String
+    var media:String
     var iduser:String
     
     
