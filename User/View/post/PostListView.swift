@@ -14,14 +14,13 @@ struct PostListView: View {
         VStack{
            ForEach(postviewmodel.posts){ post in
              
-               PostCardView(author:"HASSEN MRAKBEN", content: post.content, id: post.id, datepub: post.publicationDate, count_likes: "\(post.likes.count.formatted())",imagepost:"starbucks")
+               PostCardView(author:"HASSEN MRAKBEN", content: post.content, id: post.id, datepub: post.publicationDate, count_likes: "\(post.likes.count.formatted())",imagepost:post.media)
    
                     .padding(.top)
-               
-             
-               
-               
                 
+            }
+           .onAppear{
+                postviewmodel.getPosts()
             }
             
         }

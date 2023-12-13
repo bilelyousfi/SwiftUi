@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-
 struct PostCardView: View {
       @State var author : String
       @State var content : String
@@ -18,11 +17,12 @@ struct PostCardView: View {
     var body: some View {
         VStack{
             HStack{
-                Image("obida")
+               Image("obida")
                     .resizable()
                     .aspectRatio( contentMode: .fill)
                     .frame(width: 40,height: 40)
                     .clipShape(RoundedRectangle(cornerRadius: 10))
+                
                 VStack{
                     Text(author).bold()
                     Text(datepub)
@@ -35,11 +35,13 @@ struct PostCardView: View {
             }
             
             VStack(alignment: .leading, spacing: 15) {
-                        Image(imagepost)
+                AsyncImage(url: URL(string: imagepost)){ phase in phase.image?
+
+                             //Image(imagepost)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .roundedCorner(20, corners: [.bottomLeft, .topRight, .bottomRight])
-                        
+                              }
                         HStack {
                             HStack(spacing: 3) {
                                 Image(systemName: "heart")
@@ -73,6 +75,6 @@ struct PostCardView: View {
 
 struct PostCardView_Previews: PreviewProvider {
     static var previews: some View {
-        PostCardView(author: "hassen",  content: "ffffff", id: "000", datepub: "01/01/2023", count_likes: "0",imagepost: "starbucks")
+        PostCardView(author: "hassen",  content: "ffffff", id: "000", datepub: "01/01/2023", count_likes: "0",imagepost: "https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/library/content/images/size/w1200/2023/10/free-images.jpg")
     }
 }

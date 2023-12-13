@@ -12,6 +12,8 @@ struct AddPost: View {
     @State private var content: String = ""
     @State private var selectedImage: UIImage?
     @State private var isShowingImagePicker = false
+    @State private var showAlert = false
+
     @State private var issuccesSendPost = false
 
     @State private var iduser: String="6553fe22539c1e3985881aa2"
@@ -57,6 +59,14 @@ struct AddPost: View {
             .sheet(isPresented: $isShowingImagePicker) {
                 ImagePicker(selectedImage: $selectedImage)
             }
+            .alert(isPresented: $showAlert) {
+                Alert(
+                    title: Text("Success"),
+                    message: Text("Post added successfully!"),
+                    dismissButton: .default(Text("OK"))
+                )
+            }
+
         }
         .navigationTitle("ADD POST")
     }
@@ -79,7 +89,7 @@ struct AddPost: View {
                 formData.append(Data(content.utf8), withName: "content")
                 formData.append(imageData, withName: "media", fileName: "image.jpg", mimeType: "image/jpeg")
             },
-            to: "http://172.18.6.149:9090/posts/addpost/\(iduser)"
+            to: "http://192.168.1.87:9090/posts/addpost/\(iduser)"
         ).response {
             response in
             switch response.result {
@@ -87,6 +97,7 @@ struct AddPost: View {
                 if let data = response.data{
                     print("response:\(String(data: data,encoding: .utf8) ?? "")")
                     issuccesSendPost = true
+                    showAlert = true
                 }
             case .failure(let error):
                 print("error:\(error)")

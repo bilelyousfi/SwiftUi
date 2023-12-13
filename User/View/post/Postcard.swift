@@ -14,8 +14,6 @@ struct Postcard: View {
     let likes_count:String
     let datepub:String
     let comment_count:String
-    
-
     var body: some View {
         VStack{
             PostCardHeader( nameuser: nameuser,datpub: datepub)

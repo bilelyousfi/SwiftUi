@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Comment:Codable,Identifiable{
+struct Comment:Identifiable,Decodable{
     var id:String
     var content:String
     var iduser:String
