@@ -17,6 +17,14 @@
 		2A306EB52B249D9D00022C5C /* PostCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A306EB42B249D9D00022C5C /* PostCardView.swift */; };
 		2A306EB72B24AE3000022C5C /* CommentItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A306EB62B24AE3000022C5C /* CommentItemView.swift */; };
 		2AD055BE2B29F65900F493A1 /* imageViewPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD055BD2B29F65900F493A1 /* imageViewPost.swift */; };
+		2AD055C12B2A202500F493A1 /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD055C02B2A202500F493A1 /* CartManager.swift */; };
+		2AD055C42B2A20C500F493A1 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD055C32B2A20C500F493A1 /* CategoryModel.swift */; };
+		2AD055C72B2A212700F493A1 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD055C62B2A212700F493A1 /* ProductModel.swift */; };
+		2AD055CA2B2A229A00F493A1 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD055C92B2A229A00F493A1 /* Home.swift */; };
+		2AD055CC2B2A22B700F493A1 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD055CB2B2A22B700F493A1 /* CardView.swift */; };
+		2AD055CE2B2A22D900F493A1 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD055CD2B2A22D900F493A1 /* CollectionView.swift */; };
+		2AD055D22B2A271E00F493A1 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 2AD055D12B2A271E00F493A1 /* CodeScanner */; };
+		2AD055D52B2A75E800F493A1 /* shopviewmodels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD055D42B2A75E800F493A1 /* shopviewmodels.swift */; };
 		2AF3B5DF2B25C694002331DB /* UserPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF3B5DE2B25C694002331DB /* UserPost.swift */; };
 		6E1E95F72B150795007CA401 /* ChangePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1E95F62B150795007CA401 /* ChangePassword.swift */; };
 		6E44C5012B17289F0081E8E5 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E44C5002B17289F0081E8E5 /* CameraView.swift */; };
@@ -85,6 +93,13 @@
 		2A306EB42B249D9D00022C5C /* PostCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCardView.swift; sourceTree = "<group>"; };
 		2A306EB62B24AE3000022C5C /* CommentItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentItemView.swift; sourceTree = "<group>"; };
 		2AD055BD2B29F65900F493A1 /* imageViewPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageViewPost.swift; sourceTree = "<group>"; };
+		2AD055C02B2A202500F493A1 /* CartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
+		2AD055C32B2A20C500F493A1 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
+		2AD055C62B2A212700F493A1 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		2AD055C92B2A229A00F493A1 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		2AD055CB2B2A22B700F493A1 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		2AD055CD2B2A22D900F493A1 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
+		2AD055D42B2A75E800F493A1 /* shopviewmodels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shopviewmodels.swift; sourceTree = "<group>"; };
 		2AF3B5DE2B25C694002331DB /* UserPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPost.swift; sourceTree = "<group>"; };
 		6E1E95F62B150795007CA401 /* ChangePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePassword.swift; sourceTree = "<group>"; };
 		6E44C5002B17289F0081E8E5 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
@@ -135,6 +150,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AD055D22B2A271E00F493A1 /* CodeScanner in Frameworks */,
 				2A0FC8EF2B260F8200293B35 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -191,6 +207,33 @@
 			path = Comments;
 			sourceTree = "<group>";
 		};
+		2AD055C22B2A208800F493A1 /* ShopModels */ = {
+			isa = PBXGroup;
+			children = (
+				2AD055C32B2A20C500F493A1 /* CategoryModel.swift */,
+				2AD055C62B2A212700F493A1 /* ProductModel.swift */,
+			);
+			path = ShopModels;
+			sourceTree = "<group>";
+		};
+		2AD055C82B2A226D00F493A1 /* ShopView */ = {
+			isa = PBXGroup;
+			children = (
+				2AD055C92B2A229A00F493A1 /* Home.swift */,
+				2AD055CB2B2A22B700F493A1 /* CardView.swift */,
+				2AD055CD2B2A22D900F493A1 /* CollectionView.swift */,
+			);
+			path = ShopView;
+			sourceTree = "<group>";
+		};
+		2AD055D32B2A75A600F493A1 /* shopViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2AD055D42B2A75E800F493A1 /* shopviewmodels.swift */,
+			);
+			path = shopViewModel;
+			sourceTree = "<group>";
+		};
 		2AF3B5DD2B25C670002331DB /* UserPost */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,6 +284,7 @@
 		6E44C5042B174F650081E8E5 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				2AD055D32B2A75A600F493A1 /* shopViewModel */,
 				2A2FFBEA2B1B3C4800F15B13 /* PostViewModels */,
 				6E44C5052B174F7B0081E8E5 /* empty.swift */,
 			);
@@ -250,6 +294,7 @@
 		6E5566D42B11EAEC0032CD09 = {
 			isa = PBXGroup;
 			children = (
+				2AD055C02B2A202500F493A1 /* CartManager.swift */,
 				6E5566E02B11EAEC0032CD09 /* UserApp.swift */,
 				6E5566DF2B11EAEC0032CD09 /* User */,
 				6E5566F62B11EAEE0032CD09 /* UserTests */,
@@ -314,6 +359,7 @@
 		6E55674B2B11F1AE0032CD09 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2AD055C82B2A226D00F493A1 /* ShopView */,
 				2A306EB12B24989800022C5C /* Comments */,
 				960FAFB02B175CA30094A145 /* post */,
 				6E44C5022B1728C80081E8E5 /* FavouritesView.swift */,
@@ -336,6 +382,7 @@
 		6E5567B02B13AE7F0032CD09 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				2AD055C22B2A208800F493A1 /* ShopModels */,
 				2AF3B5DD2B25C670002331DB /* UserPost */,
 				2A2FFBF42B1B824B00F15B13 /* ComentModels */,
 				2A2FFBE62B1B368100F15B13 /* PostModels */,
@@ -384,6 +431,7 @@
 			name = Ecoshop;
 			packageProductDependencies = (
 				2A0FC8EE2B260F8200293B35 /* Alamofire */,
+				2AD055D12B2A271E00F493A1 /* CodeScanner */,
 			);
 			productName = User;
 			productReference = 6E5566DD2B11EAEC0032CD09 /* Ecoshop.app */;
@@ -459,6 +507,7 @@
 			mainGroup = 6E5566D42B11EAEC0032CD09;
 			packageReferences = (
 				2A0FC8ED2B260F8200293B35 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				2AD055D02B2A271E00F493A1 /* XCRemoteSwiftPackageReference "CodeScanner" */,
 			);
 			productRefGroup = 6E5566DE2B11EAEC0032CD09 /* Products */;
 			projectDirPath = "";
@@ -504,6 +553,8 @@
 			files = (
 				6E5566ED2B11EAEE0032CD09 /* User.xcdatamodeld in Sources */,
 				6E44C5062B174F7B0081E8E5 /* empty.swift in Sources */,
+				2AD055D52B2A75E800F493A1 /* shopviewmodels.swift in Sources */,
+				2AD055C12B2A202500F493A1 /* CartManager.swift in Sources */,
 				6E5567A72B13409A0032CD09 /* CustomTabBar.swift in Sources */,
 				960A500E2B18C4F20003FA95 /* HouseView.swift in Sources */,
 				6E5567522B11FA990032CD09 /* CustomTF.swift in Sources */,
@@ -523,6 +574,7 @@
 				9EB1A9DE2B14ED1F00159AC6 /* UserDetails.swift in Sources */,
 				6E44C5012B17289F0081E8E5 /* CameraView.swift in Sources */,
 				2AF3B5DF2B25C694002331DB /* UserPost.swift in Sources */,
+				2AD055CA2B2A229A00F493A1 /* Home.swift in Sources */,
 				6E5567AB2B13656A0032CD09 /* ProfileView.swift in Sources */,
 				6E5567562B121CE60032CD09 /* Signup.swift in Sources */,
 				962FF7652B18B51E00EF5655 /* PostCardHeader.swift in Sources */,
@@ -537,13 +589,17 @@
 				2A2FFBFA2B1B892500F15B13 /* CommentViewModel.swift in Sources */,
 				6E5566E12B11EAEC0032CD09 /* UserApp.swift in Sources */,
 				2A2FFBF82B1B87BE00F15B13 /* AddPost.swift in Sources */,
+				2AD055CE2B2A22D900F493A1 /* CollectionView.swift in Sources */,
 				2A306EB52B249D9D00022C5C /* PostCardView.swift in Sources */,
 				6E5567A02B1257F60032CD09 /* OTPVerificationView.swift in Sources */,
 				6E5567AF2B137F3A0032CD09 /* SettingsRowView.swift in Sources */,
 				96D49E652B18AAA80096A92D /* PostCardBody.swift in Sources */,
 				6E5567582B1223B70032CD09 /* ForgotPassword.swift in Sources */,
+				2AD055C72B2A212700F493A1 /* ProductModel.swift in Sources */,
 				6E5567B72B13D4260032CD09 /* LoginResponse.swift in Sources */,
 				96D49E632B18A9230096A92D /* Extensions.swift in Sources */,
+				2AD055C42B2A20C500F493A1 /* CategoryModel.swift in Sources */,
+				2AD055CC2B2A22B700F493A1 /* CardView.swift in Sources */,
 				6E55675A2B122E450032CD09 /* PasswordResetView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -761,6 +817,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need the cemera to scan QR codes";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = esprit.tn.UserTests;
@@ -780,6 +838,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need the cemera to scan QR codes";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = esprit.tn.UserTests;
@@ -875,6 +935,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		2AD055D02B2A271E00F493A1 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
+			requirement = {
+				kind = exactVersion;
+				version = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -882,6 +950,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2A0FC8ED2B260F8200293B35 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		2AD055D12B2A271E00F493A1 /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2AD055D02B2A271E00F493A1 /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
 		};
 /* End XCSwiftPackageProductDependency section */
 

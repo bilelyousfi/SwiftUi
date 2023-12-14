@@ -4,15 +4,21 @@
 //
 //  Created by gataga on 9/12/2023.
 //
+//@ . [© - = _ \  / "" ' ' ! ? { }
 
 import SwiftUI
+import Alamofire
 struct PostCardView: View {
       @State var author : String
       @State var content : String
       @State var id : String
       @State var datepub : String
-      @State var count_likes : String
-    @State var imagepost : String
+    @State var likes : [String]
+      @State var imagepost : String
+    @State private var isbuttonlike = false
+    // @State private var isbuttondeslike = false
+    @State private var iduser: String="6553fe22539c1e3985881aa2"
+    @StateObject private var postviewmodel = PostViewModel()
 
     var body: some View {
         VStack{
@@ -44,8 +50,24 @@ struct PostCardView: View {
                               }
                         HStack {
                             HStack(spacing: 3) {
-                                Image(systemName: "heart")
-                                Text(count_likes)
+                                
+                                Button {
+                                addlike(idpost: id, iduser: iduser)
+                                }
+                            label: {
+                                    if isbuttonlike {
+                                    Image(systemName: "heart.fill")
+                                     .foregroundColor(.red)
+                                        } else {
+                                        Image(systemName: "heart")
+                                    .foregroundColor(.gray)
+                                        }
+                                    }
+                                if isbuttonlike {
+                                    let ciunt = likes.count + 1
+                                    Text("\(ciunt.formatted())")}else{
+                                        Text("\(likes.count.formatted())")
+                                    }
                             }
                             Spacer()
                             HStack {
@@ -70,11 +92,30 @@ struct PostCardView: View {
                 }
             
         }
+    
+    func addlike(idpost:String,iduser:String){
+      
+
+        let likeEndpoint = "http://192.168.1.87:9090/posts/addlike/\(idpost)/\(iduser)"
+        AF.request(likeEndpoint, method: .put)
+            .validate()
+            .responseDecodable(of: Post.self) { response in
+                switch response.result {
+                case .success(let like):
+                    // Vous pouvez traiter le nouveau commentaire ici
+                    print("LIKE ajouté avec succès : \(like)")
+                    isbuttonlike = true
+                case .failure(let error):
+                    print("Erreur lors de l'ajout du LIKE : \(error)")
+                }
+            }
     }
+    
+}
 
 
 struct PostCardView_Previews: PreviewProvider {
     static var previews: some View {
-        PostCardView(author: "hassen",  content: "ffffff", id: "000", datepub: "01/01/2023", count_likes: "0",imagepost: "https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/library/content/images/size/w1200/2023/10/free-images.jpg")
+        PostCardView(author: "hassen",  content: "ffffff", id: "000", datepub: "01/01/2023", likes:[],imagepost: "https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/library/content/images/size/w1200/2023/10/free-images.jpg")
     }
 }

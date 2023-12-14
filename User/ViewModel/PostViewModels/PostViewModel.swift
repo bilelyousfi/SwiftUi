@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import Alamofire
 class PostViewModel:ObservableObject{
     @Published var posts : [Post] = []
     @Published var userpost = UserPost()
@@ -36,8 +36,24 @@ class PostViewModel:ObservableObject{
         }
         
     }
-
     
-  
+    
+   /* func addlike(idpost:String,iduser:String,islike:Bool){
+      
+
+        let likeEndpoint = "\(BaseUrl)/posts/addlike/\(idpost)/\(iduser)"
+        AF.request(likeEndpoint, method: .put, encoding: JSONEncoding.default)
+            .validate()
+            .responseDecodable(of: Post.self) { response in
+                switch response.result {
+                case .success(let like):
+                    // Vous pouvez traiter le nouveau commentaire ici
+                    print("LIKE ajouté avec succès : \(like)")
+                    islike = true
+                case .failure(let error):
+                    print("Erreur lors de l'ajout du LIKE : \(error)")
+                }
+            }
+    }*/
 }
 

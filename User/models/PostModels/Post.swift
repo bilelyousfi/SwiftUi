@@ -7,7 +7,7 @@
 //@ . [ ] - = _ \  / "" ' ' ! ? { }
 import Foundation
 
-struct Post:Codable,Identifiable{
+struct Post:Decodable,Identifiable{
     var id:String
     var content:String
     var publicationDate:String
